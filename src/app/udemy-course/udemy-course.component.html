@@ -1,0 +1,47 @@
+<form #f="ngForm"(ngSubmit)="submit(f)">
+ 
+     <div class="form-group">
+        <label for="input1">Course Name:</label>
+        <input 
+        required
+        minlength="3"
+        maxlength="7"
+        ngModel 
+        name="input1"
+        #firstName=ngModel
+         class="form-control" 
+         type="text">
+         <div class="alert alert-danger" *ngIf="firstName.touched && !firstName.valid">
+            <div *ngIf="firstName.errors?.['required']">First Name is required </div>
+            <div *ngIf="firstName.errors?.['minlength']">Minimum length {{firstName.errors?.['minlength'].requiredLength}} required</div>
+            <div *ngIf="firstName.errors?.['pattern']">Pattern did not match</div>
+          </div>         
+     </div>
+
+     <div class="form-group">
+        <label for="input2">Category:</label>
+        <select 
+        required
+        ngModel
+        name="input2"
+         id="input2"
+         #input1="ngModel"
+          class="form-control"
+          >
+          <option value=""></option>
+            <option value="development">1</option>
+            <option value="ios">2</option>
+            <option value="app">3</option>
+        </select>
+        <div class="alert alert-danger" *ngIf="input1.touched && !input1.valid">please select one</div>
+    </div>
+ 
+    <div class="form-group">
+        <label >
+        <input type="checkbox"> 30 DAY MONEY BACK GUARANTEE
+    </label>
+    </div>
+    <p>{{f.value | json}}</p>
+    <button class="btn btn-primary" [disabled]=!f.valid>Submit</button>
+
+</form>
