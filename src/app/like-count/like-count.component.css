@@ -1,0 +1,16 @@
+.liked{
+    color: #ccc;
+}
+.not-liked{
+    color:deeppink
+}
+.glyphicon{
+    padding-right: 5px;
+    
+}
+.glyphicon:hover{
+    cursor: pointer;
+}
+.hero{
+    display: inline-block;
+}

@@ -1,0 +1,9 @@
+<h3 
+
+class="glyphicon glyphicon-heart hero"
+    [class.liked]="isliked"
+    [class.not-liked]="!isliked"
+    (click)="liked()"
+></h3>
+
+<h3 class="hero">{{count}}</h3>
