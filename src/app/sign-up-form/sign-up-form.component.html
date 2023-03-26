@@ -16,6 +16,8 @@
                     <div *ngIf="username?.errors?.['minlength']">Minimum length {{username?.errors?.['minlength'].requiredLength}} required</div>
             <div *ngIf="username?.errors?.['pattern']">Pattern did not match</div>
             <div *ngIf="username?.errors?.['cannotContainSpace']">Cannot contain space</div>
+            <div *ngIf="username?.errors?.['cannotContainHarshit']">Cannot contain Harshit</div>
+
                 </div>
           </div>
 
