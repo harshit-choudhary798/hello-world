@@ -10,7 +10,7 @@
                 class="form-control" 
                 id="username"
                 placeholder="Enter username">
-
+              <div *ngIf="username?.pending">Checking for uniquness....</div>
                 <div class="alert alert-danger" *ngIf="username?.touched && username?.invalid">
                     <div *ngIf="username?.errors?.['required']">Username Name is required </div>
                     <div *ngIf="username?.errors?.['minlength']">Minimum length {{username?.errors?.['minlength'].requiredLength}} required</div>
