@@ -1,0 +1,21 @@
+<div class="zippy">
+<div class="heading"
+(click)="Active()"
+[style.backgroundColor]="isActive ? '#ccc': ''"
+>
+{{Title}} 
+
+<span class="glyphicon"
+[class.glyphicon-chevron-up]="isActive"
+[class.glyphicon-chevron-down]="!isActive"
+></span>
+
+
+</div>
+<div class="body">
+    <ng-content *ngIf="isActive"></ng-content>
+</div>
+</div>
+
+
+
