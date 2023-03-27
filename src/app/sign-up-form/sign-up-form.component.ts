@@ -22,7 +22,11 @@ export class SignUpFormComponent {
       'password' : new FormControl()
     });
   
-
+    login(){
+      this.form.setErrors({
+        invalidLogin :true
+      });
+    }
   get username(){
     return this.form.get('username')
   }
