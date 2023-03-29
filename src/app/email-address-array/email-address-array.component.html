@@ -1,0 +1,17 @@
+<form [formGroup]="form">
+    <label>Add Email Here</label>
+
+    <input type="email" #input>
+
+    <button type="button" (click)="add(input)">Add</button>
+
+    <ul>
+      <li *ngFor="let email of emails.controls; let i = index">
+        {{email.value}}
+         <button type="button" (click)="remove(i)">Remove</button> 
+      </li>
+    </ul>
+
+      <p *ngIf="form.invalid">Please enter at least one valid email address.</p>
+  </form>
+  

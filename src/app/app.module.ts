@@ -16,6 +16,9 @@ import { ContactFormComponent } from './contact-form/contact-form.component';
 import { UdemyCourseComponent } from './udemy-course/udemy-course.component';
 import { SignUpFormComponent } from './sign-up-form/sign-up-form.component';
 import { NewCourseFormComponent } from './new-course-form/new-course-form.component';
+import { EmailAddressArrayComponent } from './email-address-array/email-address-array.component';
+import { ResetPasswordComponent } from './reset-password/reset-password.component';
+
 
 @NgModule({
   declarations: [
@@ -31,7 +34,9 @@ import { NewCourseFormComponent } from './new-course-form/new-course-form.compon
     ContactFormComponent,
     UdemyCourseComponent,
     SignUpFormComponent,
-    NewCourseFormComponent
+    NewCourseFormComponent,
+    EmailAddressArrayComponent,
+    ResetPasswordComponent
   ],
   imports: [
     BrowserModule,
