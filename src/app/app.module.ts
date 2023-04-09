@@ -21,6 +21,8 @@ import { ResetPasswordComponent } from './reset-password/reset-password.componen
 import { PostsComponent } from './posts/posts.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PostService } from './post.service';
+import { ApiTestingComponent } from './api-testing/api-testing.component';
+import { ApiTestingService } from './api-testing.service';
 
 @NgModule({
   declarations: [
@@ -39,7 +41,8 @@ import { PostService } from './post.service';
     NewCourseFormComponent,
     EmailAddressArrayComponent,
     ResetPasswordComponent,
-    PostsComponent
+    PostsComponent,
+    ApiTestingComponent
   ],
   imports: [
     BrowserModule,
@@ -49,7 +52,8 @@ import { PostService } from './post.service';
   ],
   providers: [
     CoursesService,
-    PostService
+    PostService,
+    ApiTestingService
   ],
   bootstrap: [AppComponent]
 })
