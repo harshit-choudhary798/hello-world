@@ -18,7 +18,9 @@ import { SignUpFormComponent } from './sign-up-form/sign-up-form.component';
 import { NewCourseFormComponent } from './new-course-form/new-course-form.component';
 import { EmailAddressArrayComponent } from './email-address-array/email-address-array.component';
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
-
+import { PostsComponent } from './posts/posts.component';
+import { HttpClientModule } from '@angular/common/http';
+import { PostService } from './post.service';
 
 @NgModule({
   declarations: [
@@ -36,16 +38,18 @@ import { ResetPasswordComponent } from './reset-password/reset-password.componen
     SignUpFormComponent,
     NewCourseFormComponent,
     EmailAddressArrayComponent,
-    ResetPasswordComponent
+    ResetPasswordComponent,
+    PostsComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    ReactiveFormsModule
-
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [
-    CoursesService
+    CoursesService,
+    PostService
   ],
   bootstrap: [AppComponent]
 })
