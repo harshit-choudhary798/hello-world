@@ -23,6 +23,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { PostService } from './post.service';
 import { ApiTestingComponent } from './api-testing/api-testing.component';
 import { ApiTestingService } from './api-testing.service';
+import { AppRoutingModule } from './app-routing.module';
+import { HomepageComponent } from './homepage/homepage.component';
 
 @NgModule({
   declarations: [
@@ -42,13 +44,15 @@ import { ApiTestingService } from './api-testing.service';
     EmailAddressArrayComponent,
     ResetPasswordComponent,
     PostsComponent,
-    ApiTestingComponent
+    ApiTestingComponent,
+    HomepageComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule
   ],
   providers: [
     CoursesService,

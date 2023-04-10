@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ApiTestingService } from '../api-testing.service';
 
 interface Character {
+  id:number;
   name: string;
   created: Date;
   gender: string;
@@ -25,7 +26,7 @@ export class ApiTestingComponent implements OnInit {
     this.service.getCharacter().subscribe({
       next: (response:any) => {
         console.log(response.results);
-        this.characters = response.results as Character[];
+        this.characters = response.results;
       },
       error: (error) => {
         console.log(error);
