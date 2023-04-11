@@ -25,6 +25,7 @@ import { ApiTestingComponent } from './api-testing/api-testing.component';
 import { ApiTestingService } from './api-testing.service';
 import { AppRoutingModule } from './app-routing.module';
 import { HomepageComponent } from './homepage/homepage.component';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { HomepageComponent } from './homepage/homepage.component';
     ResetPasswordComponent,
     PostsComponent,
     ApiTestingComponent,
-    HomepageComponent
+    HomepageComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,

@@ -1,12 +1,11 @@
 <div class="container">
     <div class="row">
-      <div class="col-md-4 mb-4" *ngFor="let character of characters">
+      <div class="col-md-4 mb-4" >
         <div class="card">
             <img class="card-img-top character-img" [src]="character.image" alt="Character image">
           <div class="card-body">
             <h5 class="card-title" 
-                 [routerLink]="['/profiles', character.id,character.name]"
-                 [queryParams]= "{page:1,newpage:true}"
+                 [routerLink]="['/profiles', character.id]"
             >{{ character.name }}</h5>
             <p class="card-text">Gender: {{ character.gender }}</p>
             <p class="card-text">Status: {{ character.status }}</p>

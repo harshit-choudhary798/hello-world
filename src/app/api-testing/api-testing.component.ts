@@ -17,7 +17,7 @@ interface Character {
 })
 export class ApiTestingComponent implements OnInit {
 
-  characters: Character[] = [];
+  characters: any[] = [];
 
   constructor(private service: ApiTestingService) { }
 
